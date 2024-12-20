@@ -1,0 +1,69 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+#zone {
+  position: absolute;
+  background: rgba(255, 0, 0, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#score-display {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.overlay h1 {
+  margin: 0 0 20px 0;
+  font-size: 36px;
+  font-family:sans-serif;
+}
+
+.overlay button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #b30000b6;
+}

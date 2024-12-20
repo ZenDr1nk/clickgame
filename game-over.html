@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Game - Game Over</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay">
+    <h1>You Lost!</h1>
+    <p>Your Final Score: <span id="final-score">0</span></p>
+  </div>
+
+  <script>
+    const finalScore = document.getElementById('final-score');
+
+    // Get the score from the query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const score = urlParams.get('score') || 0;
+    finalScore.textContent = score;
+
+    // Redirect to main menu after 1 second
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 1000);
+  </script>
+</body>
+</html>
